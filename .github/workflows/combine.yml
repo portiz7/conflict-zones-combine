@@ -1,0 +1,43 @@
+name: Combine + clean conflict zone data
+
+on:
+  schedule:
+    # Staggered 25 minutes after czib-fetch-easa and czib-fetch-opsgroup's
+    # top-of-hour cron, so their commits have landed before this reads them.
+    - cron: '25 */6 * * *'
+  workflow_dispatch: {}   # lets you click "Run workflow" manually in the Actions tab
+
+permissions:
+  contents: write   # needed so the workflow can commit data/data.json back to the repo
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Merge sources and clean via Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/combine.py
+
+      - name: Commit updated data if it changed
+        run: |
+          git config user.name "conflict-zones-combine-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/data.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-update combined conflict zone data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi
