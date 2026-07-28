@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-28T21:18:14.364168+00:00",
+  "generated_at": "2026-07-28T21:42:28.524768+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-07-28T21:18:14.364168+00:00"
+      "fetched_at": "2026-07-28T21:42:28.524768+00:00"
     },
     "opsgroup": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-07-28T21:20:24.098426+00:00"
+      "fetched_at": "2026-07-28T21:42:27.079832+00:00"
     }
   },
   "firs": {
@@ -45,7 +45,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "The US-Iran conflict has widened again over the past 48 hours. US strikes have reportedly hit OIZI/Iranshahr airport in the south of the country, plus some targets around the Strait of Hormuz. Iran has attacked some US facilities in Kuwait, Qatar and Bahrain, plus a US radar station in Oman. Explosions also reported in Doha – likely air defence interceptions. Iran also targeted a US base in Syria but looks like no damage reported. Despite the escalation, there have still not been any new Gulf airspace closures or major airline routing changes. Kuwait remains closed to overflights – other FIRs in the region remain open with temp routes as per the Notams."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -85,7 +90,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Iraq is open for overflights again, but it still doesn’t really bring back the old Europe-Asia corridor because western Iran remains restricted and most operators still consider the ORBB/Baghdad FIR too high risk. Some airlines are using Iraq, but the main flows still seem to be north via the Caucasus/Afghanistan or south via Egypt/Saudi/Oman."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -173,7 +183,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Open and operating normally. In practice, it’s still not a major transit route for Europe-Asia traffic. Most operators continue to route via Egypt and Saudi Arabia, as they did before the conflict."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -212,7 +227,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Kuwait has extended its airspace restrictions until at least Aug 4. Overflights through the OKAC/Kuwait FIR are still not permitted – only flights arriving to or departing from OKKK/Kuwait are allowed, with prior approval."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -251,7 +271,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Bahrain is open to overflights again. Just keep in mind that nearby airspace, especially Kuwait, is still restricted and can affect your routing. EASA also advises operators to avoid the FIR at all levels."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -290,7 +315,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Qatar has now reopened to overflights. The earlier restrictions on waypoints and arrival/departure route segments have been withdrawn, although some temporary restricted areas and military activity remain. Operationally, things had been getting close to normal again, but EASA now advises operators to avoid the FIR at all levels."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -329,7 +359,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "The UAE remains open to overflights, with traffic managed through a mixture of normal ATS routes and temporary RNAV corridors. GPS interference continues to be one of the biggest operational issues across the FIR. But EASA advises operators to avoid the FIR at all levels."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -368,7 +403,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Oman remains one of the most useful FIRs in the region, especially for the southern bypass. It is open, but still part of the managed corridor system, with flow measures and ongoing GNSS interference reports."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
@@ -407,7 +447,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Syria seems to have quietly become part of the regional routing picture again after years of almost no international overflight traffic."
+        }
+      ],
       "ext": "https://safeairspace.net/syria/",
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
@@ -806,7 +851,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — below FL 320",
-      "cross": [],
+      "cross": [
+        {
+          "src": "OpsGroup (latest fetch)",
+          "detail": "Armenia and Azerbaijan remain important parts of the northern bypass, with steady overflight demand. The main issue is still Afghanistan – the OAKX/Kabul FIR remains Class G with no normal ATS service, so crews still need to use the published contingency routes and operate with TIBA procedures."
+        }
+      ],
       "bulletin": "Not matched this run — see fir_base.json",
       "issued": "",
       "revised": "",
