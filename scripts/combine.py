@@ -5,27 +5,38 @@ combine.py
 Third stage of the pipeline. Reads the raw data published by the two
 upstream source repos, merges it with the curated FIR metadata in this
 repo's data/fir_base.json, and asks Claude to clean the result up (tighten
-wording, deduplicate near-identical cross-check text between sources) before
+wording, deduplicate near-identical cross-check text across sources) before
 writing the final data/data.json that the Test_2_CZIB dashboard consumes.
 
 Upstream repos are read over plain HTTPS via raw.githubusercontent.com — no
 auth token needed, since czib-fetch-easa and czib-fetch-opsgroup are public.
 
   RAW_EASA_URL      <- czib-fetch-easa:      data/raw_easa.json
+                         {czibs: [...], information_notes: [...]}
   RAW_OPSGROUP_URL  <- czib-fetch-opsgroup:  data/raw_opsgroup.json
+                         {opsgroup: {country_notes: {...}},
+                          safeairspace: {countries: {slug: {...}}}}
 
-Matching logic (same idea as a single-repo build script would use):
-  - EASA CZIBs are matched to a FIR by simple country-name containment
-    against each CZIB's title (e.g. "Airspace of Jordan" -> country "Jordan").
-  - OpsGroup notes are matched by country name.
+Matching logic - exact country-name match (after normalization/alias), NOT
+substring containment, across all three sources. Substring matching was
+tried first for EASA and produced a real false positive: "mali" is a
+literal substring of "somalia", silently matching Somalia's FIR to Mali's
+bulletin. Every source here uses the same _norm_country() + exact-match
+approach as a result.
+
+EASA CZIBs take priority over EASA Information Notes for the bulletin/
+dates fields (a FIR only has an Information Note match at all when it has
+no CZIB - true for exactly the two FIRs in fir_base.json flagged
+isInformationNote: Ethiopia and Myanmar). OpsGroup and safeairspace.net
+both contribute cross-check entries regardless.
 
 Anything that fails to match is left with its previous value (if data.json
 already exists from a prior run) rather than silently guessing.
 
-The Claude step (scripts/combine.py's "AI clean-up" pass) is optional: if
-ANTHROPIC_API_KEY isn't set, this script still produces a complete, correct
-data.json from the programmatic merge alone — just with more literal/raw
-text and any near-duplicate cross-check entries left unmerged.
+The Claude step (ai_cleanup()) is optional: if ANTHROPIC_API_KEY isn't set,
+this script still produces a complete, correct data.json from the
+programmatic merge alone - just with more literal/raw text and any
+near-duplicate cross-check entries left unmerged.
 """
 
 import json
@@ -66,10 +77,11 @@ def fetch_remote_json(url, label):
         return {}
 
 
-# EASA's own country naming doesn't always match ours 1:1 (e.g. we say "UAE",
-# EASA says "United Arab Emirates") even though most other names differ only
-# by extra wording ("Russia" / "Russian Federation"), which bidirectional
-# substring matching already handles fine.
+# Country naming doesn't always match 1:1 across sources (we say "UAE",
+# EASA/safeairspace say "United Arab Emirates") even though most other
+# names differ only by extra wording, which exact-after-normalization
+# matching doesn't need aliases for ("Russia" IS "Russia" on every source
+# actually used here, confirmed against live data).
 COUNTRY_ALIASES = {"uae": "united arab emirates"}
 
 
@@ -78,39 +90,52 @@ def _norm_country(name):
     return COUNTRY_ALIASES.get(n, n)
 
 
-def find_easa_bulletin(country, czibs):
+def find_easa_item(country, items):
     """
-    Exact match (after normalization/alias) - NOT substring containment.
-    EASA's 'country' field values are already clean, exact names (confirmed
-    against live data: "Russia", "Syria", "Iran", etc. all matched as-is,
-    only "UAE" needed an alias). Substring matching was tried first and
-    produced a real false positive: "mali" is literally a substring of
-    "somalia", so Somalia's FIR was silently matched to Mali's bulletin.
+    Matches a FIR's country against EASA's affected_countries list - used
+    for both czibs and information_notes (same field shape on both).
     """
     target = _norm_country(country)
     if not target:
         return None
-    for c in czibs:
-        for easa_country in c.get("countries", []):
+    for item in items:
+        for easa_country in item.get("affected_countries", []):
             if _norm_country(easa_country) == target:
-                return c
+                return item
     return None
 
 
-def format_ddmmyyyy(iso_date):
-    """EASA's issued_date is ISO (e.g. '2026-07-22T00:00:00+0300'); the rest
-    of this dataset uses DD/MM/YYYY (like EASA's own valid_until_date field),
-    so reformat for consistency."""
-    if not iso_date or len(iso_date) < 10:
-        return iso_date or ""
-    y, m, d = iso_date[:10].split("-")
-    return f"{d}/{m}/{y}"
-
-
 def find_opsgroup_note(country, notes):
+    """
+    OpsGroup headings aren't clean country names (confirmed: sometimes a
+    combined region like "Armenia/Azerbaijan/Afghanistan"), so this one
+    stays substring-based rather than exact - a country name is always a
+    whole word within the heading, never a false-positive risk like
+    EASA's "mali"-in-"somalia" case (no two of our countries collide that
+    way as substrings of each other).
+
+    Uses the country name AS-IS (lowercased only, no alias/_norm_country) -
+    OpsGroup already writes "UAE" verbatim like fir_base.json does, so
+    applying the EASA-specific uae->"united arab emirates" alias here
+    broke the match instead of fixing it (confirmed: OMAE/UAE got zero
+    OpsGroup cross-check despite a matching "UAE" heading actually existing).
+    """
+    target = (country or "").strip().lower()
+    if not target:
+        return None
     for heading, text in notes.items():
-        if country.lower() in heading.lower():
+        if target in heading.lower():
             return text
+    return None
+
+
+def find_safeairspace_country(country, countries):
+    target = _norm_country(country)
+    if not target:
+        return None
+    for data in countries.values():
+        if _norm_country(data.get("name", "")) == target:
+            return data
     return None
 
 
@@ -134,26 +159,56 @@ def build_restriction_label(fir):
     return "Do not operate — all levels"
 
 
+def safeairspace_cross_label(safe_data):
+    n = safe_data.get("risk_level_number")
+    label = safe_data.get("risk_level_label")
+    if n and label:
+        return f"safeairspace.net (Risk Level {n} – {label})"
+    return "safeairspace.net"
+
+
 def merge(base, easa_raw, opsgroup_raw, previous):
-    czibs = easa_raw.get("czibs", [])
-    ops_notes = opsgroup_raw.get("country_notes", {})
+    # czib-fetch-easa deliberately scrapes ALL CZIBs, Withdrawn included (by
+    # explicit request, for historical completeness) - matching must filter
+    # to Active only, or a country whose only *current* coverage is an
+    # Information Note can silently match an old Withdrawn CZIB instead.
+    # Confirmed: Ethiopia matched a 2022 Withdrawn Tigray-region CZIB this
+    # way, hiding the real, current IN-ETHIOPIA Information Note match.
+    czibs = [c for c in easa_raw.get("czibs", []) if c.get("status") == "Active"]
+    information_notes = easa_raw.get("information_notes", [])
+    ops_notes = opsgroup_raw.get("opsgroup", {}).get("country_notes", {})
+    safe_countries = opsgroup_raw.get("safeairspace", {}).get("countries", {})
 
     out_firs = {}
     for code, fir in base["firs"].items():
         country = fir["country"]
         prev_entry = previous.get("firs", {}).get(code, {})
 
-        bulletin_match = find_easa_bulletin(country, czibs)
+        czib_match = find_easa_item(country, czibs)
+        # An Information Note is only relevant when there's no CZIB - a FIR
+        # never has both, but this keeps the two from silently colliding if
+        # that ever changes.
+        in_match = find_easa_item(country, information_notes) if not czib_match else None
+        easa_match = czib_match or in_match
+
         ops_note = find_opsgroup_note(country, ops_notes)
+        safe_data = find_safeairspace_country(country, safe_countries)
 
         cross = []
         if ops_note:
             cross.append({"src": "OpsGroup (latest fetch)", "detail": ops_note})
-        # Preserve any previously-curated cross-check entries that this run
-        # didn't refresh (e.g. hand-added FAA/AIC notes).
+        if safe_data and safe_data.get("narrative"):
+            cross.append({"src": safeairspace_cross_label(safe_data), "detail": safe_data["narrative"]})
+        # Preserve any previously-curated cross-check entries whose source
+        # category wasn't refreshed this run (e.g. hand-added AIC notes).
+        fresh_srcs = [c["src"] for c in cross]
         for old in prev_entry.get("cross", []):
-            if old.get("src") not in [c["src"] for c in cross] and old.get("src") != "OpsGroup (latest fetch)":
-                cross.append(old)
+            src = old.get("src", "")
+            if src in fresh_srcs:
+                continue
+            if src == "OpsGroup (latest fetch)" or src.startswith("safeairspace.net"):
+                continue  # stale from a prior run where this source didn't match - drop, not carry forward
+            cross.append(old)
 
         entry = {
             "name": fir["name"],
@@ -171,14 +226,16 @@ def merge(base, easa_raw, opsgroup_raw, previous):
         if fir.get("ext"):
             entry["ext"] = fir["ext"]
 
-        if bulletin_match:
-            # EASA's public export has no formal bulletin number (no "CZIB-2026-04"
-            # style field) - only an internal node id, so that's what we key off.
-            nid = bulletin_match.get("nid")
-            entry["bulletin"] = f"EASA-{nid}" if nid else prev_entry.get("bulletin", "Unknown")
-            entry["issued"] = format_ddmmyyyy(bulletin_match.get("issue_date")) or prev_entry.get("issued", "")
-            entry["revised"] = prev_entry.get("revised", "")  # not exposed by this EASA feed
-            entry["validUntil"] = bulletin_match.get("valid_until") or prev_entry.get("validUntil", "")
+        if czib_match:
+            entry["bulletin"] = czib_match.get("czib_number") or prev_entry.get("bulletin", "Unknown")
+            entry["issued"] = czib_match.get("issue_date") or prev_entry.get("issued", "")
+            entry["revised"] = czib_match.get("revision_date") or prev_entry.get("revised", "")
+            entry["validUntil"] = czib_match.get("valid_until") or prev_entry.get("validUntil", "")
+        elif in_match:
+            entry["bulletin"] = in_match.get("id") or prev_entry.get("bulletin", "Unknown")
+            entry["issued"] = in_match.get("issue_date") or prev_entry.get("issued", "")
+            entry["revised"] = prev_entry.get("revised", "")  # Information Notes expose no revision date
+            entry["validUntil"] = in_match.get("valid_until") or prev_entry.get("validUntil", "")
         else:
             entry["bulletin"] = prev_entry.get("bulletin", "Not matched this run — see fir_base.json")
             entry["issued"] = prev_entry.get("issued", "")
@@ -193,9 +250,10 @@ def merge(base, easa_raw, opsgroup_raw, previous):
 def ai_cleanup(firs):
     """
     Optional pass: asks Claude to tighten wording and deduplicate
-    near-identical cross-check text (e.g. an OpsGroup note that just
-    restates the EASA narrative in different words). Returns the possibly
-    revised firs dict, or the original unchanged if anything goes wrong.
+    near-identical cross-check text (e.g. an OpsGroup or safeairspace.net
+    note that just restates the EASA narrative in different words).
+    Returns the possibly revised firs dict, or the original unchanged if
+    anything goes wrong.
     """
     if not API_KEY:
         log("No ANTHROPIC_API_KEY set - skipping AI clean-up pass, using raw merge as-is.")
@@ -211,16 +269,21 @@ def ai_cleanup(firs):
         "You are cleaning up a JSON object of airspace conflict-zone entries for a dashboard. "
         "Each key is a FIR code; each value has fields including 'conflictType', 'narrative', "
         "'restrictionLabel', and a 'cross' list of {src, detail} cross-check entries from other "
-        "sources (e.g. OpsGroup). For each entry: "
+        "sources (src is one of 'OpsGroup (latest fetch)' or starts with 'safeairspace.net'). "
+        "For each entry: "
         "1) You may lightly rewrite 'conflictType' and 'restrictionLabel' for clarity. "
-        "2) You may tighten the wording of 'cross' entries whose src is 'OpsGroup (latest fetch)'. "
+        "2) You may tighten the wording of any 'cross' entry's 'detail' text. "
         "3) If a 'cross' entry substantially duplicates information already in 'narrative' (same "
-        "facts, just reworded), merge the new/non-redundant detail into 'narrative' and remove or "
-        "shorten the duplicate 'cross' entry rather than keeping both in full. "
+        "facts, just reworded), merge the new/non-redundant detail into 'narrative' and shorten the "
+        "duplicate 'cross' entry rather than keeping both in full. "
+        "4) If two 'cross' entries (e.g. OpsGroup and safeairspace.net) substantially overlap with "
+        "each other, you may shorten one to just its non-redundant detail - but keep both entries "
+        "present with their original 'src', never delete one outright. "
         "Do NOT change any dates, FIR codes, country names, bulletin IDs, coordinates, or the 'src' "
-        "field of any cross-check entry. Do NOT add or remove FIR keys. Do NOT invent facts not "
-        "already present in the input. Return ONLY the complete, valid JSON object with the same "
-        "top-level structure (FIR code -> entry) - no markdown fences, no commentary."
+        "field of any cross-check entry. Do NOT add or remove FIR keys or cross-check entries. Do "
+        "NOT invent facts not already present in the input. Return ONLY the complete, valid JSON "
+        "object with the same top-level structure (FIR code -> entry) - no markdown fences, no "
+        "commentary."
     )
 
     client = anthropic.Anthropic(api_key=API_KEY)
