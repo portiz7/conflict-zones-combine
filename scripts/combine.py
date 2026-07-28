@@ -66,12 +66,45 @@ def fetch_remote_json(url, label):
         return {}
 
 
+# EASA's own country naming doesn't always match ours 1:1 (e.g. we say "UAE",
+# EASA says "United Arab Emirates") even though most other names differ only
+# by extra wording ("Russia" / "Russian Federation"), which bidirectional
+# substring matching already handles fine.
+COUNTRY_ALIASES = {"uae": "united arab emirates"}
+
+
+def _norm_country(name):
+    n = (name or "").strip().lower()
+    return COUNTRY_ALIASES.get(n, n)
+
+
 def find_easa_bulletin(country, czibs):
+    """
+    Exact match (after normalization/alias) - NOT substring containment.
+    EASA's 'country' field values are already clean, exact names (confirmed
+    against live data: "Russia", "Syria", "Iran", etc. all matched as-is,
+    only "UAE" needed an alias). Substring matching was tried first and
+    produced a real false positive: "mali" is literally a substring of
+    "somalia", so Somalia's FIR was silently matched to Mali's bulletin.
+    """
+    target = _norm_country(country)
+    if not target:
+        return None
     for c in czibs:
-        title = (c.get("title") or "").lower()
-        if country.lower() in title:
-            return c
+        for easa_country in c.get("countries", []):
+            if _norm_country(easa_country) == target:
+                return c
     return None
+
+
+def format_ddmmyyyy(iso_date):
+    """EASA's issued_date is ISO (e.g. '2026-07-22T00:00:00+0300'); the rest
+    of this dataset uses DD/MM/YYYY (like EASA's own valid_until_date field),
+    so reformat for consistency."""
+    if not iso_date or len(iso_date) < 10:
+        return iso_date or ""
+    y, m, d = iso_date[:10].split("-")
+    return f"{d}/{m}/{y}"
 
 
 def find_opsgroup_note(country, notes):
@@ -139,9 +172,12 @@ def merge(base, easa_raw, opsgroup_raw, previous):
             entry["ext"] = fir["ext"]
 
         if bulletin_match:
-            entry["bulletin"] = bulletin_match.get("czib_number") or prev_entry.get("bulletin", "Unknown")
-            entry["issued"] = bulletin_match.get("issue_date") or prev_entry.get("issued", "")
-            entry["revised"] = bulletin_match.get("revision_date") or prev_entry.get("revised", "")
+            # EASA's public export has no formal bulletin number (no "CZIB-2026-04"
+            # style field) - only an internal node id, so that's what we key off.
+            nid = bulletin_match.get("nid")
+            entry["bulletin"] = f"EASA-{nid}" if nid else prev_entry.get("bulletin", "Unknown")
+            entry["issued"] = format_ddmmyyyy(bulletin_match.get("issue_date")) or prev_entry.get("issued", "")
+            entry["revised"] = prev_entry.get("revised", "")  # not exposed by this EASA feed
             entry["validUntil"] = bulletin_match.get("valid_until") or prev_entry.get("validUntil", "")
         else:
             entry["bulletin"] = prev_entry.get("bulletin", "Not matched this run — see fir_base.json")
