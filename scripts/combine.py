@@ -290,10 +290,17 @@ def ai_cleanup(firs):
     try:
         response = client.messages.create(
             model=MODEL,
-            max_tokens=8000,
+            # Bumped from 8000 after a real production failure: with three
+            # sources' worth of narrative + cross-check text per zone, the
+            # full 22-zone response no longer fit and got cut off mid-string
+            # (confirmed: "Unterminated string" JSON parse error).
+            max_tokens=32000,
             system=system_prompt,
             messages=[{"role": "user", "content": json.dumps(firs, ensure_ascii=False)}],
         )
+        if response.stop_reason == "max_tokens":
+            log("AI clean-up response was truncated (hit max_tokens) - keeping raw merge instead.")
+            return firs
         text = "".join(block.text for block in response.content if block.type == "text")
         cleaned = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
         revised = json.loads(cleaned)
