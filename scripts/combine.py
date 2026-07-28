@@ -288,20 +288,23 @@ def ai_cleanup(firs):
 
     client = anthropic.Anthropic(api_key=API_KEY)
     try:
-        response = client.messages.create(
+        # Streaming, not messages.create(): confirmed in production that a
+        # non-streaming call with this large a max_tokens is rejected
+        # client-side by the SDK ("Streaming is required for operations
+        # that may take longer than 10 minutes") - the earlier attempt to
+        # just raise max_tokens (8000 -> 32000, to stop responses getting
+        # cut off mid-string) tripped this guard immediately.
+        with client.messages.stream(
             model=MODEL,
-            # Bumped from 8000 after a real production failure: with three
-            # sources' worth of narrative + cross-check text per zone, the
-            # full 22-zone response no longer fit and got cut off mid-string
-            # (confirmed: "Unterminated string" JSON parse error).
             max_tokens=32000,
             system=system_prompt,
             messages=[{"role": "user", "content": json.dumps(firs, ensure_ascii=False)}],
-        )
-        if response.stop_reason == "max_tokens":
+        ) as stream:
+            final_message = stream.get_final_message()
+        if final_message.stop_reason == "max_tokens":
             log("AI clean-up response was truncated (hit max_tokens) - keeping raw merge instead.")
             return firs
-        text = "".join(block.text for block in response.content if block.type == "text")
+        text = "".join(block.text for block in final_message.content if block.type == "text")
         cleaned = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
         revised = json.loads(cleaned)
         if not isinstance(revised, dict) or set(revised.keys()) != set(firs.keys()):
