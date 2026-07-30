@@ -16,17 +16,20 @@ Every 6 hours, 25 minutes after the two source repos' cron (and on manual
 
 1. Reads `data/raw_easa.json` from
    [czib-fetch-easa](https://github.com/portiz7/czib-fetch-easa) and
-   `data/raw_opsgroup.json` from
-   [czib-fetch-opsgroup](https://github.com/portiz7/czib-fetch-opsgroup), both over
-   plain `https://raw.githubusercontent.com/...` — no auth token needed, since those
-   repos are public.
+   `data/raw_safeairspace.json` from
+   [czib-fetch-opsgroup](https://github.com/portiz7/czib-fetch-opsgroup) (that repo's
+   name is historical — it scrapes safeairspace.net only now, OpsGroup's blog was
+   dropped as a source since it only ever covered a fixed 14-country subset of what
+   safeairspace.net already covers with a real risk rating), both over plain
+   `https://raw.githubusercontent.com/...` — no auth token needed, since those repos
+   are public.
 2. Merges them with the curated, slow-changing FIR metadata in this repo's
    `data/fir_base.json` (geography, conflict classification, tags — edited by hand
    when a new zone appears).
 3. Sends the merged result to Claude, which tightens wording and deduplicates
-   near-identical cross-check text between sources (e.g. an OpsGroup note that just
-   restates the EASA narrative), without inventing facts, changing dates, or touching
-   FIR codes / coordinates / country names.
+   near-identical cross-check text (e.g. a safeairspace.net note that just restates
+   the EASA narrative), without inventing facts, changing dates, or touching FIR
+   codes / coordinates / country names.
 4. Writes the final `data/data.json` — the exact file the Test_2_CZIB dashboard
    fetches at runtime — and commits it if it changed.
 
