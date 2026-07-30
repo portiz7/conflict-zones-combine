@@ -14,8 +14,13 @@ auth token needed, since czib-fetch-easa and czib-fetch-opsgroup are public.
   RAW_EASA_URL      <- czib-fetch-easa:      data/raw_easa.json
                          {czibs: [...], information_notes: [...]}
   RAW_OPSGROUP_URL  <- czib-fetch-opsgroup:  data/raw_opsgroup.json
-                         {opsgroup: {country_notes: {...}},
-                          safeairspace: {countries: {slug: {...}}}}
+                         {opsgroup: {countries: {...}},
+                          safeairspace: {countries: {...}}}
+                         opsgroup.countries and safeairspace.countries share
+                         one record shape: {country, risk_level_number,
+                         risk_level_label, narrative, related_reading,
+                         warnings} - unified upstream so this script doesn't
+                         need two different matching functions for them.
 
 Matching logic - exact country-name match (after normalization/alias), NOT
 substring containment, across all three sources. Substring matching was
@@ -105,36 +110,27 @@ def find_easa_item(country, items):
     return None
 
 
-def find_opsgroup_note(country, notes):
+def find_country_record(country, countries):
     """
-    OpsGroup headings aren't clean country names (confirmed: sometimes a
-    combined region like "Armenia/Azerbaijan/Afghanistan"), so this one
-    stays substring-based rather than exact - a country name is always a
-    whole word within the heading, never a false-positive risk like
-    EASA's "mali"-in-"somalia" case (no two of our countries collide that
-    way as substrings of each other).
-
-    Uses the country name AS-IS (lowercased only, no alias/_norm_country) -
-    OpsGroup already writes "UAE" verbatim like fir_base.json does, so
-    applying the EASA-specific uae->"united arab emirates" alias here
-    broke the match instead of fixing it (confirmed: OMAE/UAE got zero
-    OpsGroup cross-check despite a matching "UAE" heading actually existing).
+    One matching function for BOTH opsgroup.countries and
+    safeairspace.countries now that czib-fetch-opsgroup normalizes both to
+    the same {country, risk_level_number, risk_level_label, narrative,
+    related_reading, warnings} shape - they used to be two different
+    schemas (OpsGroup was a flat {heading: text} map with combined-country
+    headings like "Armenia/Azerbaijan/Afghanistan"), which needed two
+    separate matching functions with different logic. OpsGroup now splits
+    combined headings into one clean record per country before this ever
+    sees it, so plain exact-match (after normalization) works for both -
+    no more substring matching, and no more special-casing the UAE alias
+    per source (applying _norm_country() to both sides symmetrically
+    is what was missing before: comparing an aliased target against an
+    un-aliased dict key broke the match, not the alias itself).
     """
-    target = (country or "").strip().lower()
-    if not target:
-        return None
-    for heading, text in notes.items():
-        if target in heading.lower():
-            return text
-    return None
-
-
-def find_safeairspace_country(country, countries):
     target = _norm_country(country)
     if not target:
         return None
     for data in countries.values():
-        if _norm_country(data.get("name", "")) == target:
+        if _norm_country(data.get("country", "")) == target:
             return data
     return None
 
@@ -162,7 +158,7 @@ def build_restriction_label(fir):
 def safeairspace_cross_label(safe_data):
     n = safe_data.get("risk_level_number")
     label = safe_data.get("risk_level_label")
-    if n and label:
+    if n is not None and label and label != "None":
         return f"safeairspace.net (Risk Level {n} – {label})"
     return "safeairspace.net"
 
@@ -176,7 +172,7 @@ def merge(base, easa_raw, opsgroup_raw, previous):
     # way, hiding the real, current IN-ETHIOPIA Information Note match.
     czibs = [c for c in easa_raw.get("czibs", []) if c.get("status") == "Active"]
     information_notes = easa_raw.get("information_notes", [])
-    ops_notes = opsgroup_raw.get("opsgroup", {}).get("country_notes", {})
+    ops_countries = opsgroup_raw.get("opsgroup", {}).get("countries", {})
     safe_countries = opsgroup_raw.get("safeairspace", {}).get("countries", {})
 
     out_firs = {}
@@ -191,12 +187,12 @@ def merge(base, easa_raw, opsgroup_raw, previous):
         in_match = find_easa_item(country, information_notes) if not czib_match else None
         easa_match = czib_match or in_match
 
-        ops_note = find_opsgroup_note(country, ops_notes)
-        safe_data = find_safeairspace_country(country, safe_countries)
+        ops_record = find_country_record(country, ops_countries)
+        safe_data = find_country_record(country, safe_countries)
 
         cross = []
-        if ops_note:
-            cross.append({"src": "OpsGroup (latest fetch)", "detail": ops_note})
+        if ops_record and ops_record.get("narrative"):
+            cross.append({"src": "OpsGroup (latest fetch)", "detail": ops_record["narrative"]})
         if safe_data and safe_data.get("narrative"):
             cross.append({"src": safeairspace_cross_label(safe_data), "detail": safe_data["narrative"]})
         # Preserve any previously-curated cross-check entries whose source
