@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-04T18:15:07.190412+00:00",
+  "generated_at": "2026-08-05T10:13:12.864036+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-08-04T18:15:07.190412+00:00"
+      "fetched_at": "2026-08-05T10:13:12.864036+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-08-04T18:14:36.134136+00:00"
+      "fetched_at": "2026-08-05T10:11:47.792755+00:00"
     }
   },
   "firs": {
@@ -987,7 +987,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 3 – Caution)",
-          "detail": "The security situation in Myanmar has deteriorated since the military coup in Feb 2021. There is conflict and violence across many parts of the country, involving air strikes and armed clashes. Several countries have issued airspace warnings at the lower flight levels due to the potential risk from military ops, surface-to-air fire and anti-aviation weaponry. We have also had reports of GPS jamming (and maybe spoofing) in the north of the FIR for overflights between China and Bangladesh airspace. Major events : Jan 2024: Armed group shot down a military helicopter in the northern state of Kachin, which borders China. They likely used a man portable air defence system (MANPAD). Sep 2023: Several attacks by rebel groups against military targets across the country, including a makeshift drone which dropped bombs on aircraft hangars at an airbase next to VYNT/Naypyitaw airport. Sep 2023: Reports of intermittent GPS jamming on airway N895 over the mainland in the VYYF/Yangon FIR. Apr 2023: Myanmar’s main airport VYYY/Yangon temporarily closed following attack by resistance groups with improvised artillery rounds. Sep 2022: A Myanmar National Airlines passenger was reportedly shot as bullets passed through the fuselage of the ATR 72 aircraft on approach to VYLK/Loikaw. Feb 2021: Military coup ousted the government. ATC strike at the end of Feb resulted in no ATC service provided to overflights (read more on that here ). Since then, there have been increasing strikes and mass protests by opposition activists,  as well as clashes with militia and airstrikes on areas where militia are known to be active. OPSGROUP Article - Myanmar, Nov 2022"
+          "detail": "The security situation in Myanmar has deteriorated since the military coup in Feb 2021. There is conflict and violence across many parts of the country, involving air strikes and armed clashes. Several countries have issued airspace warnings at the lower flight levels due to the potential risk from military ops, surface-to-air fire and anti-aviation weaponry. We have also had reports of GPS jamming (and maybe spoofing) in the north of the FIR for overflights between China and Bangladesh airspace. Major events : Feb 2026: Armed groups targeted an ATR with passengers on board preparing to depart VYMK/Myitkyina with a first-person view suicide drone. Damage was caused to the nose, midesection and tail and was later declared a war crime under the Geneva Convention. The airport was temporarily closed. Jan 2024: Armed group shot down a military helicopter in the northern state of Kachin, which borders China. They likely used a man portable air defence system (MANPAD). Sep 2023: Several attacks by rebel groups against military targets across the country, including a makeshift drone which dropped bombs on aircraft hangars at an airbase next to VYNT/Naypyitaw airport. Sep 2023: Reports of intermittent GPS jamming on airway N895 over the mainland in the VYYF/Yangon FIR. Apr 2023: Myanmar’s main airport VYYY/Yangon temporarily closed following attack by resistance groups with improvised artillery rounds. Sep 2022: A Myanmar National Airlines passenger was reportedly shot as bullets passed through the fuselage of the ATR 72 aircraft on approach to VYLK/Loikaw. Feb 2021: Military coup ousted the government. ATC strike at the end of Feb resulted in no ATC service provided to overflights (read more on that here ). Since then, there have been increasing strikes and mass protests by opposition activists,  as well as clashes with militia and airstrikes on areas where militia are known to be active. OPSGROUP Article - Myanmar, Nov 2022"
         }
       ],
       "bulletin": "IN-MYANMAR",
