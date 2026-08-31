@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-31T05:13:55.380474+00:00",
+  "generated_at": "2026-08-31T13:26:39.577388+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-08-31T05:13:55.380474+00:00"
+      "fetched_at": "2026-08-31T13:26:39.577388+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-08-31T03:52:07.391360+00:00"
+      "fetched_at": "2026-08-31T12:47:52.273090+00:00"
     }
   },
   "firs": {
@@ -51,10 +51,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Iranian airspace (the OIIX/Tehran FIR) remains only partially open, and very few international operators are using it. Most Europe-Asia traffic continues to route south via Egypt/Saudi or north via the Caucasus/Afghanistan. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk in Iranian airspace remains misidentification of civil aircraft by air defence systems during periods of heightened tension. Iran has previously operated advanced air defence and conducted missile activity close to busy international routes with little warning to civil aviation, and the shoot-down of Ukraine International Airlines flight 752 over Tehran in Jan 2020 shows how quickly the situation can deteriorate. Several states continue to warn against operations in Iranian airspace, and EASA continues to advise operators not to operate in the OIIX/Tehran FIR at any altitude under its current CZIB. Major events: July 2026: EASA's current CZIB continues to advise operators not to operate in the OIIX/Tehran FIR at any altitude following renewed military activity in the region. June 2026: Iran partially reopened the eastern part of the OIIX/Tehran FIR for overflights, while the western part remains closed. March 2026: OIIX/Tehran FIR closed following large-scale US and Israeli strikes on Iranian military targets and subsequent Iranian missile and drone retaliation across the Middle East. June 2025: Israel and Iran exchanged missile strikes, prompting renewed airspace warnings and avoidance. Oct 2024: Israel and Iran carried out missile attacks against each other, leading most international operators to avoid both airspaces. Jan 2020: Iran shot down Ukraine International Airlines flight 752 over Tehran after misidentifying the aircraft as a hostile target."
         }
       ],
-      "bulletin": "CZIB-2026-04",
+      "bulletin": "CZIB-2026-04-R1",
       "issued": "08/07/2026",
-      "revised": "",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "ORBB": {
       "name": "FIR Baghdad",
@@ -96,10 +96,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Despite that, Iraqi airspace (the ORBB/Baghdad FIR) remains open to overflights and some operators continue using it. However, most Europe-Asia traffic still routes south via Egypt/Saudi or north via the Caucasus/Afghanistan. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to regional conflicts, as well as the potential for misidentification by air defence systems operated by both local and foreign military forces active in the country. There is also an ongoing threat from terrorist groups possessing portable anti-aircraft weaponry. Several states continue to maintain airspace warnings for Iraq, and EASA continues to advise operators not to operate in the ORBB/Baghdad FIR at any altitude under its current CZIB. Major events: July 2026: EASA's current CZIB continues to advise operators not to operate in the ORBB/Baghdad FIR at any altitude. June 2026: ORBB/Baghdad FIR reopened to overflights following the US-Iran ceasefire, with north-south routes available through the FIR. March 2026: ORBB/Baghdad FIR closed following US and Israeli strikes on Iran and subsequent Iranian retaliation across the region. June 2025: Airspace closed following Israeli missile attack on Iran; missiles and drones transited Iraqi airspace. Apr 2024: Airspace closed due to Iran drone and missile strike on Israel. Apr 2023: Several drone and missile attacks in northern Iraq launched from Turkey and Iran, including strikes near ORSU and ORER. Oct 2021: US operators permitted to overfly the ORBB/Baghdad FIR above FL320 under updated FAA restrictions."
         }
       ],
-      "bulletin": "CZIB-2026-05",
+      "bulletin": "CZIB-2026-05-R1",
       "issued": "08/07/2026",
-      "revised": "",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OLBB": {
       "name": "FIR Beirut",
@@ -141,10 +141,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Israeli airstrikes in Lebanon (the OLBB/Beirut FIR) continue, and most international operators continue to avoid the airspace. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is military activity linked to the Israel-Hezbollah conflict and the wider regional security situation, including missile and drone activity. Several states maintain long-standing warnings advising operators to avoid Lebanese airspace, and EASA continues to advise operators not to operate in the OLBB/Beirut FIR at any altitude under its current CZIB. Some states allow limited operations to OLBA/Beirut provided arrivals and departures remain over the Mediterranean Sea. Major events: July 2026: EASA's current CZIB continues to advise operators not to operate in the OLBB/Beirut FIR at any altitude following renewed military activity in the region. Feb-Jul 2026: Israeli airstrikes continued in Lebanon despite repeated ceasefire extensions and diplomatic efforts to reduce hostilities. Oct 2024: Israel launched a ground operation against Hezbollah in southern Lebanon. Nov 2023 - ongoing: GNSS spoofing and jamming reported in the OLBB/Beirut FIR."
         }
       ],
-      "bulletin": "CZIB-2026-06",
+      "bulletin": "CZIB-2026-06-R1",
       "issued": "08/07/2026",
-      "revised": "",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OJAC": {
       "name": "FIR Amman",
@@ -194,10 +194,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Despite that, Jordan airspace (the OJAC/Amman FIR) remains open and is operating normally. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to regional conflicts. Jordan has previously been affected by missiles and drones crossing its airspace during escalations involving Israel and Iran, and there have been no significant downgrades to recent airspace warnings. EASA's current Information Note advises operators to take the potential risk into account before operating in the OJAC/Amman FIR. Major events: July 2026: EASA issued a new Information Note advising operators to take the potential risk into account before operating in the OJAC/Amman FIR following renewed military activity in the Gulf. Feb-Jul 2026: Jordan remained open throughout the Iran conflict, although missile and drone activity affected several neighbouring countries. Apr 2024: Jordan temporarily closed its airspace during the Iranian drone and missile attack on Israel. Oct 2023: Jordan intercepted drones and missiles transiting its airspace during regional escalation."
         }
       ],
-      "bulletin": "CZIB-2026-08",
+      "bulletin": "CZIB-2026-08-R1",
       "issued": "22/07/2026",
-      "revised": "",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OKAC": {
       "name": "FIR Kuwait",
@@ -238,10 +238,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Kuwait has been directly affected by the conflict, and the OKAC/Kuwait FIR remains open for arrivals and departures only - overflights continue to be prohibited. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to the wider Iran conflict. Kuwait has already been directly affected by strikes at OKKK/Kuwait airport and other military targets in the country, and there have been no significant downgrades to recent airspace warnings. EASA now advises operators not to operate in the OKAC/Kuwait FIR at any altitude under its current CZIB. Major events: July 2026: EASA issued a new CZIB advising operators not to operate in the OKAC/Kuwait FIR at any altitude following renewed military activity in the Gulf. Feb-Jul 2026: OKAC/Kuwait FIR closed and reopened several times during the Iran conflict. It is currently open for arrivals and departures only, with overflights remaining prohibited. March 2026: Missile and drone strikes damaged OKKK/Kuwait airport. June 2025: Israel and Iran exchanged missile strikes across the region."
         }
       ],
-      "bulletin": "CZIB-2026-07R1",
+      "bulletin": "CZIB-2026-07R2",
       "issued": "14/07/2026",
-      "revised": "22/07/2026",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OBBB": {
       "name": "FIR Bahrain",
@@ -282,10 +282,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Despite that, Bahrain airspace (the OBBB/Bahrain FIR) remains open to overflights. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to the wider Iran conflict. Bahrain lies close to several key military facilities in the Gulf region, and there have been no significant downgrades to recent airspace warnings. EASA now advises operators not to operate in the OBBB/Bahrain FIR at any altitude under its current CZIB. Major events: July 2026: EASA issued a new CZIB advising operators not to operate in the OBBB/Bahrain FIR at any altitude following renewed military activity in the Gulf. Feb-Jul 2026: OBBB/Bahrain FIR closed and reopened several times during the Iran conflict before reopening to normal overflight operations. March 2026: Iranian missile and drone attacks targeted several Gulf states, including incidents affecting airspace around Bahrain. June 2025: Israel and Iran exchanged missile strikes, prompting renewed airspace warnings across the region."
         }
       ],
-      "bulletin": "CZIB-2026-07R1",
+      "bulletin": "CZIB-2026-07R2",
       "issued": "14/07/2026",
-      "revised": "22/07/2026",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OTDF": {
       "name": "FIR Doha",
@@ -326,10 +326,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Despite that, Qatar airspace (the OTDF/Doha FIR) remains open and is operating largely normally. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to the wider Iran conflict. Qatar was directly affected during the conflict, including missile strikes near Doha, and there have been no significant downgrades to recent airspace warnings. EASA now advises operators not to operate in the OTDF/Doha FIR at any altitude under its current CZIB. Major events: July 2026: EASA issued a new CZIB advising operators not to operate in the OTDF/Doha FIR at any altitude following renewed military activity in the Gulf. Feb-Jul 2026: OTDF/Doha FIR closed and reopened several times during the Iran conflict before reopening to normal overflight operations. March 2026: Iranian missile strike reported at Al Udeid Air Base near Doha. June 2025: Israel and Iran exchanged missile strikes, prompting renewed airspace warnings across the region."
         }
       ],
-      "bulletin": "CZIB-2026-07R1",
+      "bulletin": "CZIB-2026-07R2",
       "issued": "14/07/2026",
-      "revised": "22/07/2026",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OMAE": {
       "name": "FIR Emirates",
@@ -365,10 +365,10 @@
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
       "cross": [],
-      "bulletin": "CZIB-2026-07R1",
+      "bulletin": "CZIB-2026-07R2",
       "issued": "14/07/2026",
-      "revised": "22/07/2026",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OOMM": {
       "name": "FIR Muscat — west of 58°E only",
@@ -409,10 +409,10 @@
           "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Despite that, Oman airspace (the OOMM/Muscat FIR) remains open and is a key part of the main southern bypass route around the Middle East conflict zone, carrying significant Europe-Asia overflight traffic. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is spillover of missile or drone activity from conflicts elsewhere in the region. Oman sits close to the Strait of Hormuz and remains an important link in the Egypt-Saudi-Oman routing used by many operators. EASA's current CZIB advises operators not to operate over the waters of the Gulf of Oman within the OOMM/Muscat FIR west of 58°E. Major events: July 2026: EASA issued a new CZIB advising operators not to operate over the waters of the Gulf of Oman within the OOMM/Muscat FIR west of 58°E. Feb-Jul 2026: Oman remained open throughout the Iran conflict and became a key part of the main southern bypass route around the conflict zone. June 2025: Israel and Iran exchanged missile strikes, prompting renewed airspace warnings across the Gulf region. Oct 2024: Israel and Iran carried out missile attacks against each other, leading many operators to avoid airspace between the two countries."
         }
       ],
-      "bulletin": "CZIB-2026-07R1",
+      "bulletin": "CZIB-2026-07R2",
       "issued": "14/07/2026",
-      "revised": "22/07/2026",
-      "validUntil": "31/08/2026"
+      "revised": "31/08/2026",
+      "validUntil": "30/09/2026"
     },
     "OSTT": {
       "name": "FIR Damascus",
