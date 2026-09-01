@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-01T11:31:11.730473+00:00",
+  "generated_at": "2026-09-01T16:28:26.542468+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-09-01T11:31:11.730473+00:00"
+      "fetched_at": "2026-09-01T16:28:26.542468+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-09-01T11:09:47.313069+00:00"
+      "fetched_at": "2026-09-01T16:06:32.431043+00:00"
     }
   },
   "firs": {
