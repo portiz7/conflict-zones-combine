@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-24T04:27:38.221039+00:00",
+  "generated_at": "2026-09-24T11:33:05.494141+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-09-24T04:27:38.221039+00:00"
+      "fetched_at": "2026-09-24T11:33:05.494141+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-09-24T03:19:03.373618+00:00"
+      "fetched_at": "2026-09-24T11:10:07.660363+00:00"
     }
   },
   "firs": {
@@ -943,7 +943,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 2 – Danger exists)",
-          "detail": "Improving airspace risk picture in Ethiopia’s northern Tigray region (the Ethiopia/Eritrea border) since a peace deal was agreed to end the conflict in early Nov 2022. Airspace warnings remain in place though - several states say to avoid the area. The primary risk to aviation is from any large-scale ceasefire violations involving missiles or anti-aircraft weaponry, which may present a risk to overflights in the region - civil aircraft being mistaken for something of military interest, or simply caught in the crossfire. Ethiopia Airspace Update, July 2022 (OPSGROUP article) Major Events: Feb 2024: New flare-up in fighting in the Amhara region (south of Tigray region), including air strikes. Nov 2022: Peace deal agreed in the Tigray region. Ethiopian Airlines is planning to resume flights to HAMK/Mekele airport. Nov 2021: Several western countries issued airspace warnings, as well as “do not travel” travel warnings for the Tigray region following increased fighting there. July 2021: HAAA/Addis FIR published a Notam closing a section of airspace below FL290 over the Tigray. This followed reports that militia shot down a military transport plane in the region the previous week, near the capital Mekele. Nov 2020: Major escalation of the conflict in the Tigray region. Some airways were closed by the Ethiopian and Sudanese CAAs. Other airways that were still open were very close to the conflict zone. These are frequently used by international operators on the Europe-East Africa route. In particular: UN321, UG300 and UL432. Multiple airports were targeted by rockets. Missiles were fired across the border into Eritrea, targeting HHAS/Asmara. Within Ethiopia, HABD/Bahir Dar and HAGN/Gondar were also targeted. Sep 2018: Risk due to hidden ATC strike. Ethiopian ATC controllers went on strike, and the ECAA and Ethiopian Airlines recruited both retired and foreign controllers to pick up the slack. Ethiopia denied several times that there was in fact a strike happening at all. The strike ended Sep 7. Many were not qualified to operate in Ethiopian airspace, due to inexperience."
+          "detail": "Update 24 Sep 2026: Tigrayan forces have taken control of HAMK/Mekelle airport in the north of Ethiopia, as fighting between them and Ethiopian government forces increases. Ethiopian Airlines has reportedly suspended flights to all three airports in the Tigray region (HAMK/Mekelle, HATF/Axum and HASI/Shire) from Sep 23 until further notice. The primary risk to aviation is from the fighting itself. Drone strikes, missiles and other military weapons are being used in the region, creating a risk to aircraft operating close to the conflict. Major Events: Sep 2026: Fighting escalated in Tigray. Tigrayan forces took HAMK/Mekelle, and Ethiopian Airlines suspended flights to all three Tigray airports. Feb 2024: Fighting flared up again in Amhara, including air strikes. Nov 2022: Peace deal agreed in Tigray. Ethiopian Airlines planned to resume flights to HAMK/Mekelle. July 2021: HAAA/Addis FIR closed airspace below FL290 over Tigray after a military aircraft was reportedly shot down near Mekele. Nov 2020: Major escalation in Tigray. Several airways were closed, airports were hit by rockets, and missiles were fired into Eritrea. HABD/Bahir Dar and HAGN/Gondar were also targeted. Sep 2018: Ethiopian ATC controllers went on strike, with retired and foreign controllers brought in to cover operations."
         }
       ],
       "bulletin": "IN-ETHIOPIA",
