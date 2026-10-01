@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-01T12:58:18.589737+00:00",
+  "generated_at": "2026-10-01T22:35:09.107672+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-01T12:58:18.589737+00:00"
+      "fetched_at": "2026-10-01T22:35:09.107672+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-01T12:30:32.521887+00:00"
+      "fetched_at": "2026-10-01T22:22:24.657744+00:00"
     }
   },
   "firs": {
@@ -454,10 +454,10 @@
         }
       ],
       "ext": "https://safeairspace.net/syria/",
-      "bulletin": "CZIB-2017-03R19",
+      "bulletin": "CZIB-2017-03R20",
       "issued": "31/03/2017",
-      "revised": "12/05/2026",
-      "validUntil": "31/10/2026"
+      "revised": "01/10/2026",
+      "validUntil": "30/11/2026"
     },
     "OYSC": {
       "name": "FIR Sana'a only",
