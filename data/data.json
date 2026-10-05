@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-05T05:18:36.977988+00:00",
+  "generated_at": "2026-10-05T14:21:32.653461+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-05T05:18:36.977988+00:00"
+      "fetched_at": "2026-10-05T14:21:32.653461+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-05T04:14:42.880648+00:00"
+      "fetched_at": "2026-10-05T13:42:07.654739+00:00"
     }
   },
   "firs": {
@@ -93,7 +93,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 2 – Danger exists)",
-          "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Despite that, Iraqi airspace (the ORBB/Baghdad FIR) remains open to overflights and some operators continue using it. However, most Europe-Asia traffic still routes south via Egypt/Saudi or north via the Caucasus/Afghanistan. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to regional conflicts, as well as the potential for misidentification by air defence systems operated by both local and foreign military forces active in the country. There is also an ongoing threat from terrorist groups possessing portable anti-aircraft weaponry. Several states continue to maintain airspace warnings for Iraq, and EASA continues to advise operators not to operate in the ORBB/Baghdad FIR at any altitude under its current CZIB. Major events: July 2026: EASA's current CZIB continues to advise operators not to operate in the ORBB/Baghdad FIR at any altitude. June 2026: ORBB/Baghdad FIR reopened to overflights following the US-Iran ceasefire, with north-south routes available through the FIR. March 2026: ORBB/Baghdad FIR closed following US and Israeli strikes on Iran and subsequent Iranian retaliation across the region. June 2025: Airspace closed following Israeli missile attack on Iran; missiles and drones transited Iraqi airspace. Apr 2024: Airspace closed due to Iran drone and missile strike on Israel. Apr 2023: Several drone and missile attacks in northern Iraq launched from Turkey and Iran, including strikes near ORSU and ORER. Oct 2021: US operators permitted to overfly the ORBB/Baghdad FIR above FL320 under updated FAA restrictions."
+          "detail": "Oct 2026: The US and coalition military mission in Iraq ended on Sep 30, with forces departing Erbil. Iraqi airspace remains open to overflights, but the withdrawal removes a layer of US air defence around ORER/Erbil while armed factions remain active. This leaves Iraq more exposed to missile and drone attacks and localised insecurity, particularly in the Kurdistan Region. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk remains missile and drone activity linked to regional conflicts, alongside the potential for misidentification by air defence systems and the presence of armed groups with access to anti-aircraft weapons. EASA continues to advise operators not to operate in the ORBB/Baghdad FIR at any altitude. Despite the FIR remaining open, most Europe-Asia traffic continues to route south via Egypt/Saudi or north via the Caucasus/Afghanistan. Major events: Oct 2026: US and coalition forces leave Erbil, removing a layer of air defence as armed factions remain active. Mar 2026: ORBB/Baghdad FIR closed following strikes on Iran and Iranian retaliation. Jun 2025: Airspace closed after Israeli strikes on Iran, missiles and drones transited Iraq. Apr 2024: Airspace closed during Iran's drone and missile attack on Israel. Apr 2023: Drone and missile attacks in northern Iraq launched from Turkey and Iran. Oct 2021: US operators permitted to overfly ORBB/Baghdad FIR above FL320 under revised FAA rules."
         }
       ],
       "bulletin": "CZIB-2026-05-R2",
