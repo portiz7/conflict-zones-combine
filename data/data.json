@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07T13:08:13.359749+00:00",
+  "generated_at": "2026-10-07T22:59:00.190589+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-07T13:08:13.359749+00:00"
+      "fetched_at": "2026-10-07T22:59:00.190589+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-07T12:42:40.320484+00:00"
+      "fetched_at": "2026-10-07T22:46:03.549488+00:00"
     }
   },
   "firs": {
@@ -449,8 +449,8 @@
       "restrictionLabel": "Do not operate — all levels",
       "cross": [
         {
-          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
-          "detail": "July 2026: The US-Iran ceasefire has effectively broken down, with renewed military action and attacks around the Strait of Hormuz. Syrian airspace (the OSTT/Damascus FIR) remains high risk, but some regional operators have started using it again as an alternative to the more restricted Iran/Iraq routing. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is military activity linked to the conflict in Syria, including Israeli airstrikes targeting Iranian and Hezbollah-linked positions, as well as the potential for misidentification by air defence systems. Several countries continue to prohibit or advise against operations in the OSTT/Damascus FIR due to the risk from military operations, anti-aviation weaponry and unstable security conditions. Major events: March 2026: OSTT/Damascus FIR closed following US and Israeli strikes on Iran and subsequent Iranian retaliation across the region. Jan-Jul 2026: A gradual increase in overflights through Syria as some regional operators use the FIR as an alternative to Iran and Iraq. Dec 2024: Syrian airspace temporarily closed following the fall of the Assad regime. Oct 2023: Airstrikes damaged runways at OSDI/Damascus and OSAP/Aleppo airports. Feb 2020: An A320 approaching Damascus diverted after being caught in crossfire during Israeli airstrikes. Sep 2018: Russian IL-20 shot down in error near the Syria-Cyprus FIR boundary."
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: Syrian airspace (the OSTT/Damascus FIR) remains high risk, but some regional operators have started using it again as an alternative to the more restricted Iran/Iraq routing. EASA has eased its advice, now allowing flights at FL260 and above in most of the FIR, although restrictions remain in the western part of the airspace. The primary risk is military activity in and around Syrian airspace, including Israeli airstrikes and the interception of missiles and drones. Falling debris from intercepted weapons can pose a risk to civil aircraft, while air defence systems also create a risk of misidentification. Drones, rockets and MANPADS are an additional threat at lower levels. Major events: Oct 2026: EASA eased its Syria CZIB, allowing FL260+ in most of the Damascus FIR. Oct 2026: Regional operators increasingly using Syrian airspace as an alternative to Iran and Iraq. March 2026: OSTT/Damascus FIR closed following US and Israeli strikes on Iran. Dec 2024: Syrian airspace closed following the fall of the Assad regime. Oct 2023: Airstrikes damaged runways at OSDI/Damascus and OSAP/Aleppo. Feb 2020: A320 diverted after being caught in crossfire near Damascus. Sep 2018: Russian IL-20 shot down in error near the Syria-Cyprus FIR boundary."
         }
       ],
       "ext": "https://safeairspace.net/syria/",
@@ -495,7 +495,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
-          "detail": "Yemen remains an active conflict zone, and the vast majority of Yemeni airspace (the OYSC/Sanaa FIR) should be avoided. Several countries prohibit aircraft from overflying any land portion of the FIR. US operators can still use offshore routes UT702 and M999, while other countries permit flights on overwater portions of Yemeni airspace. The security situation has deteriorated sharply since Sep 2026, with renewed fighting between Houthi and Saudi-backed government forces and an increase in missile and drone attacks. Saudi airspace to the north and Somali airspace to the south also carry risks. The primary risk is intentional targeting by Houthi forces and other groups with access to sophisticated missiles, drones and anti-aircraft weaponry. Civil aircraft are also exposed to the wider military activity, including Saudi-led airstrikes and Houthi missile and drone attacks. Major events: Oct 2026: Fighting has intensified between Houthi and Saudi-backed government forces, particularly around the Bab el-Mandeb area. Oct 2026: OYAA/Aden airport was targeted - a missile landed near the runway as a Cairo flight was approaching and the flight was diverted to Jeddah. Jul 2026: Yemeni government forces struck the runway at OYSN/Sanaa airport to prevent an Iranian aircraft from landing. Dec 2024 - ongoing: OYSN/Sanaa Airport remains closed following Israeli airstrikes. Jan 2024: US and UK airstrikes against Houthi targets began following missile and drone attacks in the Red Sea."
+          "detail": "Oct 2026: Yemen remains an active conflict zone, and the vast majority of Yemeni airspace (the OYSC/Sanaa FIR) should be avoided. Several countries prohibit aircraft from overflying any land portion of the FIR. US operators can still use offshore routes UT702 and M999, while other countries permit flights on overwater portions of Yemeni airspace. The security situation has deteriorated sharply since Sep 2026, with renewed fighting between Houthi and Saudi-backed government forces and an increase in missile and drone attacks. Saudi airspace to the north and Somali airspace to the south also carry risks. The primary risk is intentional targeting by Houthi forces and other groups with access to sophisticated missiles, drones and anti-aircraft weaponry. Civil aircraft are also exposed to the wider military activity, including Saudi-led airstrikes and Houthi missile and drone attacks. Major events: Oct 2026: Fighting has intensified between Houthi and Saudi-backed government forces, particularly around the Bab el-Mandeb area. Oct 2026: OYAA/Aden airport was targeted - a missile landed near the runway as a Cairo flight was approaching and the flight was diverted to Jeddah. Jul 2026: Yemeni government forces struck the runway at OYSN/Sanaa airport to prevent an Iranian aircraft from landing. Dec 2024 - ongoing: OYSN/Sanaa Airport remains closed following Israeli airstrikes. Jan 2024: US and UK airstrikes against Houthi targets began following missile and drone attacks in the Red Sea."
         }
       ],
       "bulletin": "CZIB-2017-07R20",
