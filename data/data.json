@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07T05:37:36.725386+00:00",
+  "generated_at": "2026-10-07T13:08:13.359749+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-07T05:37:36.725386+00:00"
+      "fetched_at": "2026-10-07T13:08:13.359749+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-07T04:29:44.181077+00:00"
+      "fetched_at": "2026-10-07T12:42:40.320484+00:00"
     }
   },
   "firs": {
@@ -495,7 +495,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
-          "detail": "Yemen remains an active conflict zone, and the vast majority of Yemeni airspace (OYSC/Sanaa FIR) should be avoided. Several countries prohibit aircraft from overflying any land portion of the FIR. US operators can still use offshore routes UT702 and M999, while other countries permit flights on overwater portions of Yemeni airspace. Saudi airspace to the north and Somali airspace to the South also have risks. The primary risk is intentional targeting by terrorist groups with access to sophisticated anti-aircraft weaponry. Civil aircraft may also be at danger from on-going high intensity military operations including the use of explosive drones and missiles. Saudi and Israeli airstrikes can occur at any time, including in the capital Sana’a. Major events: Jul 2026: Yemen's government carried out an airstrike on the runway at OYSN/Sanaa Airport to stop an Iranian aircraft from landing. Dec 2024 - ongoing: OYSN/Sanaa Airport closed due to damage from Israeli airstrikes in Dec 2024 and May 2025. Jan 2024: US and UK carried out airstrikes against Houthi rebels in Yemen, in response to recent missile and drone attacks in the Red Sea. Sep 2023: Houthi drone attacks near the Yemen-Saudi border. Apr-Oct 2022: All parties in the Yemeni conflict agree a ceasefire. 2018-2022: Frequent Saudi airstrikes on Sanaa and other targets in Yemen in retaliation for Houthi drone attacks across the border. 2017: OYSN/Sanaa Airport badly damaged by coalition airstrikes. Saudi-Yemen Airspace Update, Oct 2020 (OPSGROUP article)"
+          "detail": "Yemen remains an active conflict zone, and the vast majority of Yemeni airspace (the OYSC/Sanaa FIR) should be avoided. Several countries prohibit aircraft from overflying any land portion of the FIR. US operators can still use offshore routes UT702 and M999, while other countries permit flights on overwater portions of Yemeni airspace. The security situation has deteriorated sharply since Sep 2026, with renewed fighting between Houthi and Saudi-backed government forces and an increase in missile and drone attacks. Saudi airspace to the north and Somali airspace to the south also carry risks. The primary risk is intentional targeting by Houthi forces and other groups with access to sophisticated missiles, drones and anti-aircraft weaponry. Civil aircraft are also exposed to the wider military activity, including Saudi-led airstrikes and Houthi missile and drone attacks. Major events: Oct 2026: Fighting has intensified between Houthi and Saudi-backed government forces, particularly around the Bab el-Mandeb area. Oct 2026: OYAA/Aden airport was targeted - a missile landed near the runway as a Cairo flight was approaching and the flight was diverted to Jeddah. Jul 2026: Yemeni government forces struck the runway at OYSN/Sanaa airport to prevent an Iranian aircraft from landing. Dec 2024 - ongoing: OYSN/Sanaa Airport remains closed following Israeli airstrikes. Jan 2024: US and UK airstrikes against Houthi targets began following missile and drone attacks in the Red Sea."
         }
       ],
       "bulletin": "CZIB-2017-07R20",
