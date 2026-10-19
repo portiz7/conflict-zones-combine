@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-19T04:21:48.030563+00:00",
+  "generated_at": "2026-10-19T12:51:56.736876+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-19T04:21:48.030563+00:00"
+      "fetched_at": "2026-10-19T12:51:56.736876+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-19T03:24:42.563492+00:00"
+      "fetched_at": "2026-10-19T12:14:14.722528+00:00"
     }
   },
   "firs": {
@@ -235,7 +235,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 2 – Danger exists)",
-          "detail": "Sep 2026: Kuwait has kept restrictions on the OKAC/Kuwait FIR in place following the wider US-Iran conflict. The airspace is open for approved flights to OKKK/Kuwait airport, but overflights remain prohibited. The restriction has now been extended into November. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk remains missile and drone activity linked to the wider regional conflict. Kuwait has already been directly affected by Iranian attacks, including strikes on OKKK/Kuwait airport where Terminal 1 was damaged in June. Military activity around the Kuwait/Bahrain FIR boundary has also been reported. GPS interference, ATC congestion and reroutes remain wider operational issues across the region. Major events: Sep 2026: Kuwait extended its airspace restrictions, with overflights still prohibited and approved arrivals/departures permitted. Aug 2026: EASA issued revised guidance for the Persian Gulf following the US-Iran conflict, identifying continued risks from missile and drone activity, air defence operations and military activity. Feb-July 2026: OKAC/Kuwait FIR was closed and reopened several times during the Iran conflict."
+          "detail": "Oct 2026: Kuwait has reopened to overflights through the OKAC/Kuwait FIR, restoring the central routing option between Europe and the Middle East via Turkey-Iraq-Kuwait-Bahrain-Qatar-UAE. Overflights are permitted between the OBBB/Bahrain and ORBB/Baghdad FIRs at FL280 and above. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk remains the potential for missile and drone activity linked to the wider regional conflict. Kuwait has previously been directly affected by Iranian attacks, including a strike on OKKK/Kuwait airport that damaged Terminal 1 in June. Although the threat from Iranian activity has eased recently, the wider risk of escalation remains. Major events: Oct 2026: Kuwait reopened to limited overflights between Bahrain and Baghdad FIRs at FL280 and above. Aug 2026: EASA issued revised guidance for the Persian Gulf following the US-Iran conflict, identifying continued risks from missile and drone activity, air defence operations and military activity. Feb-Jul 2026: OKAC/Kuwait FIR was closed and reopened several times during the Iran conflict."
         }
       ],
       "bulletin": "CZIB-2026-07R3",
