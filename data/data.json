@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T11:36:37.687310+00:00",
+  "generated_at": "2026-10-21T17:02:15.588034+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-21T11:36:37.687310+00:00"
+      "fetched_at": "2026-10-21T17:02:15.588034+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-21T11:13:53.969134+00:00"
+      "fetched_at": "2026-10-21T16:40:11.776095+00:00"
     }
   },
   "firs": {
@@ -630,7 +630,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
-          "detail": "Following a military coup in April 2023, Sudan remains closed to all civilian flights. In South Sudan, air navigation services remain suspended above FL245. There is ongoing fighting in Sudan between government and militant forces. HSSK/Khartoum airport is closed, but no Notams are being issued. There is a Contingency Plan available with published overflight routes via HSPN/Port Sudan, Egypt, Saudi Arabia and South Sudan. If routing via nearby airspace, be aware of other active warnings in close proximity. Several countries have issued airspace warning advising their operators not to enter the airspace of Sudan, due to risks from anti-aircraft weaponry and military activity. OPSGROUP article: Sudan Airspace Update, Nov 2025 The primary risk now relates to security on the ground for any unplanned diversions to airports in Sudan. Throughout the conflict, there have been reports of passenger jets being targeted by gunfire at HSSK/Khartoum Airport. The secondary risk relates to Sudan’s proximity to South Sudan - which has poor levels of ATC provision for overflights below FL245. Major events : Nov 2025: Il-76 reportedly shot down by a surface-to-air missile near Babanusa, southern Sudan. May 2025: Drone attack targeting critical infrastructure including HSPN/Port Sudan airport. Oct 2024: Foreign-registered cargo aircraft was shot down by local militia over North Darfur (Western Sudan, near the border with Chad). Apr 2023: Military coup on Apr 15. Sudan’s airspace closed, South Sudan’s airspace closed above FL245. Oct 2021: Military coup on Oct 25. HSSK/Khartoum airport closed for two days, with all flights suspended."
+          "detail": "Oct 2026: Fighting between the Sudanese Armed Forces and the Rapid Support Forces continues, with drone attacks again reaching Khartoum. HSSK/Khartoum has resumed domestic and international flights, but attacks near the airport on Oct 19 disrupted operations. Commercial overflights of Sudan remain subject to published contingency routes and prior permission under the ICAO contingency plan. See OPSGROUP Briefing : Sudan Risk Update - 2025 The primary risk is the conflict itself, including drones, military aircraft and air-defence weapons. These threaten civil aircraft at all altitudes, and military activity also puts aircraft and airports on the ground at risk, making unplanned diversions into Sudan hazardous. EASA advises operators not to enter the HSSS/Khartoum FIR over Sudan at any altitude. The UK and Canada also advise against entry. Nearby South Sudan adds an ATC complication, as services are unavailable above FL245 in the HSSS/Khartoum FIR over its territory and contingency procedures apply. Major events: Oct 2026: Drone attacks near HSSK/Khartoum disrupted flights. Air defences intercepted drones, but one crashed in a nearby residential area. May 2026: Sudan reopened international traffic at HSSK/Khartoum. Drone attacks earlier that month had briefly interrupted ops. Nov 2025: The RSF said it shot down a Sudanese military Il-76 near Babanusa. The army said the aircraft crashed because of a technical fault. May 2025: Drone strikes hit HSPN/Port Sudan and other infrastructure, briefly disrupting airport ops. Oct 2024: A foreign-registered cargo aircraft was shot down over North Darfur. Apr 2023: Fighting between the Sudanese Armed Forces and the RSF began, leading to major airspace restrictions and airport closures."
         }
       ],
       "ext": "https://safeairspace.net/sudan/",
