@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T04:24:52.203820+00:00",
+  "generated_at": "2026-10-21T11:36:37.687310+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-21T04:24:52.203820+00:00"
+      "fetched_at": "2026-10-21T11:36:37.687310+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-21T03:26:56.168562+00:00"
+      "fetched_at": "2026-10-21T11:13:53.969134+00:00"
     }
   },
   "firs": {
@@ -765,7 +765,7 @@
       "cross": [
         {
           "src": "safeairspace.net (Risk Level 2 – Danger exists)",
-          "detail": "The situation on the ground is highly unstable and there is an inherent risk to civilians and aircraft. The central government has little control of the major cities and ports, with ongoing attacks from extremist militants targeting civilians who continue to show an intent to target aviation interests. The primary risk is to overflying aircraft at the lower flight levels, which may be targeted by anti-aircraft-capable weapons. The US prohibits flights across Somalia’s airspace (the HCSM/Mogadishu FIR) below FL260 except for flights transiting the overwater portion of the airspace going to/from HDAM/Djibouti airport across the border in Ethiopia. Several other countries have issued airspace warnings advising against operating below FL260. The secondary risk is from aircraft transiting Somalia being contacted by unauthorized ATC units, who have been issuing climb/descent instructions that conflict with the official ones issued by Mogadishu Control. There’s also an authority dispute in the north of the HCSM/Mogadishu FIR. From Nov 2025, Somaliland has said all overflights require a PPR from its own CAA, while Somalia has reaffirmed through an AIC that it controls the entire FIR. Expect conflicting permit instructions near Hargeisa and northern Somalia. Major events : Feb 2024: OPSGROUP received several reports of aircraft within the Mogadishu FIR being contacted by a ‘fake controller’ on the same frequency, issuing conflicting instructions. More info here. Aug 2023: Reports of uncontrolled operations including combat helicopters flying at low levels (FL030) not reporting position, altitude or routing, Oct 2022: The Somalian government issued a warning that HCMM/Mogadishu airport may be targeted by militant groups amid the escalating conflict in the country. May 2022: Class A airspace implemented in the HCSM/Mogadishu FIR above FL245. More info here. 2020-ongoing: Multiple instances of Al-Shabaab attacks on HCMM/Mogadishu and nearby targets, including a UN compound. May 2020: An Embraer EMB-120 was shot down while on approach to Bardale airstrip , killing all six people on board - an accidental shoot-down by Ethiopian forces stationed in the region to combat Al-Shabaab."
+          "detail": "Oct 2026: Somalia remains highly unstable, with ongoing militant attacks and limited government control in parts of the country. In the north, Somaliland is seeking its own overflight permits, while Somalia says it controls the entire HCSM/Mogadishu FIR. Crews may also receive unauthorized ATC instructions. See OPSGROUP Briefing : Somalia ATC Conflict - 2025 The primary risk is from militant groups with anti-aircraft weapons and ongoing military activity, especially at lower altitudes. EASA advises against ops at or below FL260. US rules prohibit US operators below FL260, with a limited overwater exception for certain flights to or from HDAM/Djibouti. Germany’s warning excludes airspace east of 54°E. There is also a risk of unauthorized ATC instructions and conflicting overflight-permit claims in the north. Major events: Nov 2025: Somalia’s CAA reaffirmed its authority over the entire HCSM/Mogadishu FIR. Somaliland has separately said overflights need its permission, creating a dispute over permits in the north. Feb 2024: OPSGROUP received several reports of aircraft within the Mogadishu FIR being contacted by a ‘fake controller’ on the same frequency, issuing conflicting instructions. More info here. May 2022: Class A airspace implemented in the HCSM/Mogadishu FIR above FL245. More info here. May 2020: An Embraer EMB-120 was shot down while on approach to Bardale airstrip , killing all 6 people on board. It was believed to have been accidentally hit by Ethiopian forces operating against Al-Shabaab."
         }
       ],
       "bulletin": "CZIB-2017-05R20",
