@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-22T11:36:09.676878+00:00",
+  "generated_at": "2026-10-22T17:01:22.570546+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-22T11:36:09.676878+00:00"
+      "fetched_at": "2026-10-22T17:01:22.570546+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-22T11:12:39.984981+00:00"
+      "fetched_at": "2026-10-22T16:40:52.566488+00:00"
     }
   },
   "firs": {
@@ -45,7 +45,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "Oct 2026: Iran's OIIX/Tehran FIR has reopened to overflights, but multiple countries advise against entering the airspace, and the FAA prohibits flights by US operators in the FIR. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is misidentification of civil aircraft by Iranian air-defence systems during heightened military tension. Iran remains on high military alert, while missile activity, air-defence operations and the risk of sudden escalation create a high risk at all altitudes. The shoot-down of Ukraine International Airlines flight 752 over Tehran in Jan 2020 shows how quickly this can affect civil aviation. Major events: Oct 2026: Iran's airspace remains open to overflights. Mar 2026: OIIX/Tehran FIR closed following US and Israeli strikes on Iran and subsequent Iranian missile and drone retaliation. Jun 2025: Israel and Iran exchanged missile strikes, prompting renewed airspace warnings. Oct 2024: Israel and Iran exchanged missile attacks, leading to widespread airspace avoidance. Jan 2020: Iran shot down Ukraine International Airlines flight 752 over Tehran after misidentifying it as a hostile target."
+        }
+      ],
       "bulletin": "CZIB-2026-04-R2",
       "issued": "08/07/2026",
       "revised": "30/09/2026",
@@ -85,7 +90,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: The US and coalition military mission in Iraq ended on Sep 30, with forces departing Erbil. Iraqi airspace remains open to overflights, but the withdrawal removes a layer of US air defence around ORER/Erbil while armed factions remain active. The risk of missile and drone attacks remains, particularly in the Kurdistan Region. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk remains missile and drone activity linked to regional conflicts, alongside the potential for misidentification by air defence systems and the presence of armed groups with access to anti-aircraft weapons. France, Italy and several other European authorities advise against overflights at any altitude, while the FAA prohibits US operators from flying below FL320. Despite the FIR remaining open, most Europe-Asia traffic continues to route south via Egypt/Saudi or north via the Caucasus/Afghanistan. Major events: Oct 2026: US and coalition forces left Erbil, removing a layer of air defence as armed factions remain active. Mar 2026: ORBB/Baghdad FIR closed following strikes on Iran and Iranian retaliation. Jun 2025: Airspace closed during the Israel-Iran conflict, with missiles and drones transiting Iraq. Apr 2024: Iraqi airspace closed during Iran's drone and missile attack on Israel. Oct 2021: US operators were permitted to overfly ORBB/Baghdad FIR at FL320 and above under revised FAA rules."
+        }
+      ],
       "bulletin": "CZIB-2026-05-R2",
       "issued": "08/07/2026",
       "revised": "30/09/2026",
@@ -125,7 +135,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "Oct 2026: OLBB/Beirut FIR remains high risk, with Israeli military activity continuing despite ceasefire efforts. EASA and several countries advise against entering Lebanese airspace, with limited exceptions for flights to and from Beirut that approach and depart over the sea. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is military activity linked to the Israel-Hezbollah conflict, including Israeli airstrikes and the risk of misidentification by air defence systems. Although ceasefire efforts have reduced the intensity of fighting, military operations have continued - particularly in southern Lebanon. The risk to civil aviation remains high. Major events: Feb-Jul 2026: Israeli airstrikes continued in Lebanon despite ceasefire extensions. Oct 2024: Israel launched a ground operation against Hezbollah in southern Lebanon. Nov 2023 onwards: Regional conflict involving Israel and Hezbollah led to prolonged disruption and heightened security risks in Lebanese airspace."
+        }
+      ],
       "bulletin": "CZIB-2026-06-R2",
       "issued": "08/07/2026",
       "revised": "30/09/2026",
@@ -173,7 +188,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 3 – Caution)",
+          "detail": "Oct 2026: Missile and drone threats linked to the regional conflict remain a concern in OJAC/Amman FIR. EASA has eased its guidance, but some countries continue to advise against entering Jordanian airspace. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to the regional conflict. Previous attacks and air-defence activity have created risks from interception, misidentification and falling debris. EASA advises operators to assess the risks and maintain contingency plans, while France advises caution and Germany continues to advise against entering the FIR. Major events: Sep 2026: Renewed attacks highlighted the risk of a rapid deterioration in Jordan airspace. Jul 2026: EASA advised operators to avoid Jordanian airspace at all altitudes following renewed regional hostilities. Apr 2024: Jordan temporarily closed its airspace during Iran’s drone and missile attack on Israel."
+        }
+      ],
       "bulletin": "CZIB-2026-08-R3",
       "issued": "22/07/2026",
       "revised": "14/10/2026",
@@ -212,7 +232,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: Kuwait has reopened to overflights through the OKAC/Kuwait FIR, restoring the central routing option between Europe and the Middle East via Turkey-Iraq-Kuwait-Bahrain-Qatar-UAE. Overflights are permitted between the OBBB/Bahrain and ORBB/Baghdad FIRs at FL280 and above. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk remains the potential for missile and drone activity linked to the wider regional conflict. Kuwait has previously been directly affected by Iranian attacks, including a strike on OKKK/Kuwait airport that damaged Terminal 1 in June. Although the threat from Iranian activity has eased recently, the wider risk of escalation remains. Major events: Oct 2026: Kuwait reopened to limited overflights between Bahrain and Baghdad FIRs at FL280 and above. Aug 2026: EASA issued revised guidance for the Persian Gulf following the US-Iran conflict, identifying continued risks from missile and drone activity, air defence operations and military activity. Feb-Jul 2026: OKAC/Kuwait FIR was closed and reopened several times during the Iran conflict."
+        }
+      ],
       "bulletin": "CZIB-2026-07R3",
       "issued": "14/07/2026",
       "revised": "30/09/2026",
@@ -251,7 +276,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 3 – Caution)",
+          "detail": "Oct 2026: The OBBB/Bahrain FIR remains open, but the risk of renewed military activity linked to the wider regional conflict remains. Some restrictions remain over Persian Gulf waters, and short-notice disruption is possible. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to the regional conflict. Bahrain hosts major US military facilities and could be targeted in Iranian attacks. Air-defence activity also creates risks from misidentification and falling debris. EASA has issued a warning covering Persian Gulf waters. Major events: Feb-Jul 2026: OBBB/Bahrain FIR closed and reopened several times during the Iran conflict before returning to normal overflight operations. Mar 2026: Iranian missile and drone attacks affected several Gulf states, including Bahrain."
+        }
+      ],
       "bulletin": "CZIB-2026-07R3",
       "issued": "14/07/2026",
       "revised": "30/09/2026",
@@ -290,7 +320,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 3 – Caution)",
+          "detail": "Oct 2026: OTDF/Doha FIR remains open, but the risk of renewed military activity linked to the wider regional conflict remains. Some restrictions remain over Persian Gulf waters, and short-notice disruption is possible. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is missile and drone activity linked to the regional conflict. Qatar hosts major US military facilities and could be directly exposed to Iranian attacks. Air-defence activity also creates risks from misidentification and falling debris. Major events: Feb-Jul 2026: OTDF/Doha FIR closed and reopened several times during the Iran conflict before returning to normal overflight operations. Mar 2026: An Iranian missile strike was reported near Al Udeid Air Base, close to Doha."
+        }
+      ],
       "bulletin": "CZIB-2026-07R3",
       "issued": "14/07/2026",
       "revised": "30/09/2026",
@@ -368,7 +403,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 3 – Caution)",
+          "detail": "Oct 2026: The OOMM/Muscat FIR remains open and is a key part of the southern bypass route to avoid Iran. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is military activity around the Strait of Hormuz, including potential missile and drone attacks and air-defence operations. EASA advises against operating over the Gulf of Oman within OOMM/Muscat FIR west of 58°E at any altitude, except for arrivals and departures from airports. Major events: Feb-Jul 2026: Oman remained open throughout the Iran conflict and became a key part of the southern bypass route. Jun 2025: Israel and Iran exchanged missile strikes, prompting renewed regional airspace warnings. Oct 2024: Israel and Iran exchanged missile attacks, leading to widespread airspace avoidance."
+        }
+      ],
       "bulletin": "CZIB-2026-07R3",
       "issued": "14/07/2026",
       "revised": "30/09/2026",
@@ -407,7 +447,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: The OSTT/Damascus FIR remains high risk, although some regional operators have resumed overflights as an alternative to Iran and Iraq routings. EASA now permits flights at FL260 and above in most of the FIR, but prohibits operations at all levels in the western part. Several countries continue to advise against or prohibit operations in Syrian airspace. See OPSGROUP Briefing : Middle East airspace situation - 2026 The primary risk is ongoing military activity, including Israeli airstrikes and missiles and drones being intercepted over Syria. Drones, rockets and MANPADS are an additional threat at lower levels. The risk is highest in south-western Syria and at lower levels, but can increase across the FIR if the wider regional conflict escalates. Major events: Oct 2026: EASA revised its guidance, prohibiting flights in western Syria at all levels and below FL260 elsewhere in the FIR. Mar 2026: OSTT/Damascus FIR closed following US and Israeli strikes on Iran. Dec 2024: Syrian airspace closed following the fall of the Assad regime. Oct 2023: Airstrikes damaged runways at OSDI/Damascus and OSAP/Aleppo. Feb 2020: An A320 diverted after being caught in crossfire near Damascus. Sep 2018: A Russian Il-20 was shot down in error near the Syria-Cyprus FIR boundary."
+        }
+      ],
       "ext": "https://safeairspace.net/syria/",
       "bulletin": "CZIB-2017-03R20",
       "issued": "31/03/2017",
@@ -447,7 +492,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "Oct 2026: Yemen remains an active conflict zone, and the vast majority of Yemeni airspace (the OYSC/Sanaa FIR) should be avoided. Several countries prohibit aircraft from overflying any land portion of the FIR. US operators can still use offshore routes UT702 and M999, while other countries permit flights on overwater portions of Yemeni airspace. The security situation has deteriorated sharply since Sep 2026, with renewed fighting between Houthi and Saudi-backed government forces and an increase in missile and drone attacks. Saudi airspace to the north and Somali airspace to the south also carry risks. The primary risk is intentional targeting by Houthi forces and other groups with access to sophisticated missiles, drones and anti-aircraft weaponry. Civil aircraft are also exposed to the wider military activity, including Saudi-led airstrikes and Houthi missile and drone attacks. Major events: Oct 2026: Fighting has intensified between Houthi and Saudi-backed government forces, particularly around the Bab el-Mandeb area. Oct 2026: OYAA/Aden airport was targeted - a missile landed near the runway as a Cairo flight was approaching and the flight was diverted to Jeddah. Jul 2026: Yemeni government forces struck the runway at OYSN/Sanaa airport to prevent an Iranian aircraft from landing. Dec 2024 - ongoing: OYSN/Sanaa Airport remains closed following Israeli airstrikes. Jan 2024: US and UK airstrikes against Houthi targets began following missile and drone attacks in the Red Sea."
+        }
+      ],
       "bulletin": "CZIB-2017-07R20",
       "issued": "31/08/2017",
       "revised": "30/09/2026",
@@ -487,7 +537,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "Oct 2026: Drone attacks continue across Russia. On 6 October, Moscow reported more than 650 Ukrainian drones targeting the capital region, most of them intercepted. Most operators avoid Russian airspace. Those still flying there should expect short-notice closures or reroutes, including during the day. Ukraine’s airspace remains closed to civil aviation, and restrictions remain in place in Russian airspace near the border. See OPSGROUP Briefing : Ukraine and Russia Update March 2022 The primary risk is that civil aircraft could be misidentified or caught in air-defence activity as Russia responds to Ukrainian drones and missiles. EASA advises operators within its scope to avoid Russian airspace west of 60°E at all altitudes. Several countries also restrict flights near the Ukraine border, and GNSS interference adds to the risk. Major events: Oct 2026: More than 650 Ukrainian drones reportedly targeted the Moscow region. Most were intercepted, and air-defence activity added to the risk for civil flights. Jul 2026: EASA extended its recommendation to avoid Russian airspace west of 60°E. Dec 2024: Azerbaijan Airlines Flight 8243 was shot down near URMG/Grozny during Russian air-defence activity. EASA cites the incident as an example of the risk of misidentification. Jul 2023 - ongoing: Drone strikes around Moscow have triggered air-defence activity and repeated temporary airport closures. Feb 2022: Russia invaded Ukraine. Ukraine’s airspace closed to civil aviation, and several countries restricted their operators near the Russia-Ukraine border."
+        }
+      ],
       "bulletin": "2025-01-R3",
       "issued": "09/01/2025",
       "revised": "24/07/2026",
@@ -527,7 +582,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "Ukraine closed its entire airspace to all civil traffic on Feb 24, 2022, due to a military invasion by Russia. There is an ongoing active conflict in Ukraine between Russian and Ukrainian forces. Russia, Belarus and Moldova have closed large sections of their own airspace near to their FIR boundaries with Ukraine. All the major countries who regularly issue airspace warnings (the US, UK, Canada, France, Germany, Italy) have since issued total flight bans for Ukraine due to risk from military activity at all levels. (Several other countries have also issued flight bans for Ukraine but we have not listed them all here due to sheer volume). The primary risk is an unintended targeting of civil aircraft by military, including misidentification (as with MAS17, UIA752), or confusion. The secondary risk is potential lack of Ukrainian Air Traffic Control Service at short notice (Cyber Attack), and other unforeseeable non-normal operating environments for civil aircraft. OPSGROUP article: Ukraine and Russia Update March 2022 Prior to February 2022, there were two areas of concern in Ukraine - the conflict in the far east of the country (affecting UKDV/Dnipro FIR) and the double claim over ATC and airspace in Crimea (UKFV/URFV/Simferopol FIR)."
+        }
+      ],
       "ext": "https://safeairspace.net/ukraine/",
       "bulletin": "CZIB-2022-01R14",
       "issued": "24/02/2022",
@@ -567,7 +627,12 @@
       ],
       "tier": "full",
       "restrictionLabel": "Do not operate — all levels",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "Oct 2026: Fighting between the Sudanese Armed Forces and the Rapid Support Forces continues, with drone attacks again reaching Khartoum. HSSK/Khartoum has resumed domestic and international flights, but attacks near the airport on Oct 19 disrupted operations. Commercial overflights of Sudan remain subject to published contingency routes and prior permission under the ICAO contingency plan. See OPSGROUP Briefing : Sudan Risk Update - 2025 The primary risk is the conflict itself, including drones, military aircraft and air-defence weapons. These threaten civil aircraft at all altitudes, and military activity also puts aircraft and airports on the ground at risk, making unplanned diversions into Sudan hazardous. EASA advises operators not to enter the HSSS/Khartoum FIR over Sudan at any altitude. The UK and Canada also advise against entry. Nearby South Sudan adds an ATC complication, as services are unavailable above FL245 in the HSSS/Khartoum FIR over its territory and contingency procedures apply. Major events: Oct 2026: Drone attacks near HSSK/Khartoum disrupted flights. Air defences intercepted drones, but one crashed in a nearby residential area. May 2026: Sudan reopened international traffic at HSSK/Khartoum. Drone attacks earlier that month had briefly interrupted ops. Nov 2025: The RSF said it shot down a Sudanese military Il-76 near Babanusa. The army said the aircraft crashed because of a technical fault. May 2025: Drone strikes hit HSPN/Port Sudan and other infrastructure, briefly disrupting airport ops. Oct 2024: A foreign-registered cargo aircraft was shot down over North Darfur. Apr 2023: Fighting between the Sudanese Armed Forces and the RSF began, leading to major airspace restrictions and airport closures."
+        }
+      ],
       "ext": "https://safeairspace.net/sudan/",
       "bulletin": "CZIB-2023-01R8",
       "issued": "26/04/2023",
@@ -607,7 +672,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate, except flights to coastal airports approached from the sea, subject to ATC contact and your own risk assessment",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 1 – Do Not Fly)",
+          "detail": "A civil war has been ongoing since 2014. Some progress made in Oct 2020 with the formation of a new government, but Libya remains an active conflict zone with armed clashes between various rival militia groups across the country. There is a high risk to civil aircraft. Libyan airspace (HLLL/Tripoli FIR) should be avoided entirely. Total flight ban for US operators, and several other countries have warnings in place. The primary risk is a misident by Libyan air defense systems, or by militia who have threatened to shoot down aircraft operating in western Libya, including HLLM/Tripoli Mitiga airport. Military activity reported over the high-seas which is either operating as OAT or not in control with ATC. Risk remains high across Libya at all flight levels, and avoidance of all airspace and airports is strongly recommended. The secondary risk is that reliable ATC services cannot be guaranteed. The past few years have seen regular ATS and radar outages across the HLLL FIR airspace, and severe limitations in VHF capability, with operators having to communicate with Malta ATC for guidance. Libya Airspace Update, Feb 2024 (OPSGROUP article) Major events: August 2023: Major evacuation of aircraft from Tripoli due to violent clashes and gunfire at Mitiga airport. Tripoli mass evacuation of aircraft (OPSGROUP article) July 2023: Italy cancelled its 10-year ban on flights to/from Libya. Aircraft are no longer banned from Italian airports and airspace if they want to fly from Libya. Aug 2022: Militia air defense forces claimed to have shot down a US drone operating in the vicinity of Benghazi during a period of increased tensions and threats of renewed violence between competing militias vying for control of Tripoli. June 2022: Failed attempt by militia to enter Tripoli to seize control of government offices, resulting in armed clashes and suspension of flights at HLLM/Mitiga airport. Jan 2020: Multiple airstrikes targeting HLLM/Mitiga airport. Videos on social media showing planes landing at the airport as shells are falling in the background. Nov 2019: Militia advancing on the capital, Tripoli, declared a no-fly-zone around the city, threatening to shoot-down civil aircraft attempting to fly to HLLM/Mitiga airport. 2014: HLLT/Tripoli airport closed after clashes between rival militias destroyed most of the airport's facilities. The airport remains closed to this day; most flights operate out of HLLM/Mitiga airport."
+        }
+      ],
       "ext": "https://safeairspace.net/libya/",
       "bulletin": "CZIB-2017-02R20",
       "issued": "31/03/2017",
@@ -647,7 +717,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — below FL 260",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: Mali remains volatile after coordinated attacks across the country in April. Armed groups remain active, and recent reporting describes continued military drone ops against insurgents. Mali and Algeria reopened their airspace to each other’s flights on July 10, ending the restrictions introduced in 2025. See OPSGROUP Briefing : Mali Airspace Risk Update - 2026 The primary risk is the fighting, including drone activity and anti-aircraft weapons. The FAA warns US operators to use caution at all altitudes. Other countries set minimum levels from 25,000 ft AGL to FL320, and France advises against using GABS/Bamako, even as an alternate. These warnings cover the parts of the GOOO/Dakar FIR and DRRR/Niamey FIR over Mali. Follow current ASECNA routes and restrictions, especially in the north. Major events: Jul 2026: Mali and Algeria reopened their airspace to each other’s flights after a year of restrictions. Apr 2026: On Apr 25, armed groups including JNIM and the Tuareg-led Azawad Liberation Front launched coordinated attacks on government and military targets across Mali. Gunfire and explosions were reported near GABS/Bamako, and fighting has continued. Sep 2024: Militants attacked the airport at GABS/Bamako and set fire to the presidential aircraft. Aug 2020: Airports closed for 2 days during the coup, but Bamako ACC stayed open and overflights continued."
+        }
+      ],
       "ext": "https://safeairspace.net/mali/",
       "bulletin": "CZIB-2017-01R21",
       "issued": "31/03/2017",
@@ -687,7 +762,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — below FL 260",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: Somalia remains highly unstable, with ongoing militant attacks and limited government control in parts of the country. In the north, Somaliland is seeking its own overflight permits, while Somalia says it controls the entire HCSM/Mogadishu FIR. Crews may also receive unauthorized ATC instructions. See OPSGROUP Briefing : Somalia ATC Conflict - 2025 The primary risk is from militant groups with anti-aircraft weapons and ongoing military activity, especially at lower altitudes. EASA advises against ops at or below FL260. US rules prohibit US operators below FL260, with a limited overwater exception for certain flights to or from HDAM/Djibouti. Germany’s warning excludes airspace east of 54°E. There is also a risk of unauthorized ATC instructions and conflicting overflight-permit claims in the north. Major events: Nov 2025: Somalia’s CAA reaffirmed its authority over the entire HCSM/Mogadishu FIR. Somaliland has separately said overflights need its permission, creating a dispute over permits in the north. Feb 2024: OPSGROUP received several reports of aircraft within the Mogadishu FIR being contacted by a ‘fake controller’ on the same frequency, issuing conflicting instructions. More info here. May 2022: Class A airspace implemented in the HCSM/Mogadishu FIR above FL245. More info here. May 2020: An Embraer EMB-120 was shot down while on approach to Bardale airstrip , killing all 6 people on board. It was believed to have been accidentally hit by Ethiopian forces operating against Al-Shabaab."
+        }
+      ],
       "bulletin": "CZIB-2017-05R20",
       "issued": "31/03/2017",
       "revised": "30/09/2026",
@@ -726,7 +806,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — below FL 260",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: The OPKR/Karachi FIR and OPLR/Lahore FIR remain open to international traffic, but Indian-registered aircraft and Indian operators are still barred. The ceasefire between India and Pakistan has largely held since May 2025, but the situation remains fragile and military activity could resume with little warning. Separately, tensions along the Afghanistan border have risen again. See OPSGROUP Briefing : Pakistan/India Airspace Update - 2025 The primary risk is militant activity and anti-aircraft weapons, including missiles that can be fired from the ground, especially at lower altitudes in western Pakistan. In Kashmir, renewed fighting between India and Pakistan could put aircraft at risk of being mistaken for military targets. EASA advises against flights below FL260 over Balochistan and Khyber Pakhtunkhwa. France, Germany and Italy also advise caution at lower altitudes in the OPKR/Karachi FIR and OPLR/Lahore FIR. Major events: Oct 2026: Pakistani airstrikes in Afghanistan’s Kunar and Helmand provinces renewed cross-border fighting. Feb 2026: Cross-border strikes between Pakistan and Afghanistan escalated, but no new airspace closures or overflight bans were issued. Commercial traffic continued through the OAKX/Kabul FIR, including on routes P500 and G500. May 2025: India and Pakistan exchanged strikes and shelling in Kashmir. A ceasefire followed, but both countries continue to bar each other’s aircraft. Jan 2024: Iran carried out missile and drone strikes against a militant group in western Pakistan. Dec 2023 - ongoing: Pilots reported GPS spoofing around the OPLR/Lahore FIR, particularly near OPLA/Lahore. Feb-Aug 2019: Pakistan closed its airspace to overflights after major clashes with India."
+        }
+      ],
       "ext": "https://safeairspace.net/pakistan/",
       "bulletin": "CZIB-2018-02R21",
       "issued": "10/01/2018",
@@ -766,7 +851,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — below FL 260",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: The OPKR/Karachi FIR and OPLR/Lahore FIR remain open to international traffic, but Indian-registered aircraft and Indian operators are still barred. The ceasefire between India and Pakistan has largely held since May 2025, but the situation remains fragile and military activity could resume with little warning. Separately, tensions along the Afghanistan border have risen again. See OPSGROUP Briefing : Pakistan/India Airspace Update - 2025 The primary risk is militant activity and anti-aircraft weapons, including missiles that can be fired from the ground, especially at lower altitudes in western Pakistan. In Kashmir, renewed fighting between India and Pakistan could put aircraft at risk of being mistaken for military targets. EASA advises against flights below FL260 over Balochistan and Khyber Pakhtunkhwa. France, Germany and Italy also advise caution at lower altitudes in the OPKR/Karachi FIR and OPLR/Lahore FIR. Major events: Oct 2026: Pakistani airstrikes in Afghanistan’s Kunar and Helmand provinces renewed cross-border fighting. Feb 2026: Cross-border strikes between Pakistan and Afghanistan escalated, but no new airspace closures or overflight bans were issued. Commercial traffic continued through the OAKX/Kabul FIR, including on routes P500 and G500. May 2025: India and Pakistan exchanged strikes and shelling in Kashmir. A ceasefire followed, but both countries continue to bar each other’s aircraft. Jan 2024: Iran carried out missile and drone strikes against a militant group in western Pakistan. Dec 2023 - ongoing: Pilots reported GPS spoofing around the OPLR/Lahore FIR, particularly near OPLA/Lahore. Feb-Aug 2019: Pakistan closed its airspace to overflights after major clashes with India."
+        }
+      ],
       "bulletin": "CZIB-2018-02R21",
       "issued": "10/01/2018",
       "revised": "24/07/2026",
@@ -806,7 +896,12 @@
       ],
       "tier": "partial",
       "restrictionLabel": "Do not operate — below FL 320",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: The OAKX/Kabul FIR remains open and uncontrolled, with no ATC service. It continues to carry Europe-Asia traffic rerouted around Middle East restrictions. Renewed Pakistani airstrikes have raised the risk near the border. See OPSGROUP Briefing : March 2026 - Afghanistan Overflight Update. The primary risk comes from military activity near the Pakistan border and the lack of ATC across the OAKX/Kabul FIR. EASA, France, Germany and Canada advise against ops below FL320. Italy’s restriction allows P500 and G500 below its 25,000 ft AGL limit, while US operators may use those routes from FL300. With no ATC, aircraft must follow published contingency routes and use TIBA procedures to maintain separation. Major events: Oct 2026: Pakistani airstrikes in Kunar and Helmand renewed cross-border fighting. The UN reported civilian casualties, while Pakistan said it had targeted militants. March 2026: Middle East airspace closures sent more Europe-Asia traffic through the OAKX/Kabul FIR. Cross-border fighting with Pakistan also resumed. Feb 2026: Cross-border strikes between Pakistan and Afghanistan escalated; commercial traffic continues to transit the FIR including via P500 and G500. Aug 2021: After the Taliban takeover and allied withdrawal, the OAKX/Kabul FIR lost ATC service and became uncontrolled Class G airspace."
+        }
+      ],
       "bulletin": "CZIB-2017-08R19",
       "issued": "17/10/2017",
       "revised": "24/07/2026",
@@ -845,7 +940,12 @@
       ],
       "tier": "in",
       "restrictionLabel": "Caution only — factor into your own risk assessment and routing, below FL 260",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 2 – Danger exists)",
+          "detail": "Oct 2026: Government-aligned forces have retaken Mekelle after Tigrayan forces withdrew from the city on 3 October. Ethiopian Airlines resumed flights to HAMK/Mekelle on 11 October, but fighting and wider tensions in northern Ethiopia continue. The primary risk is armed conflict, including drone, artillery and anti-aircraft activity, particularly in Tigray, Afar and Amhara. The UK advises operators to consider the risk when overflying these regions. Italy and Germany warn of military threats across the HAAA/Addis Ababa FIR. EASA advises risk assessment below FL260, especially north of 8.5°N. French operators should remain at or above FL320 in specified northern airspace and use great caution below FL320 elsewhere in the FIR. Major Events: Oct 2026: Government-aligned forces retook Mekelle. Ethiopian Airlines resumed flights to HAMK/Mekelle on 11 Oct. Fighting and regional tensions continue. Sep 2026: Tigrayan forces took control of HAMK/Mekelle. Ethiopian Airlines suspended flights to HAMK/Mekelle, HATF/Axum and HASI/Shire as fighting escalated. Feb 2024: Fighting flared again in Amhara, including air strikes. Nov 2022: A peace deal was agreed in Tigray. Ethiopian Airlines planned to resume flights to HAMK/Mekelle. July 2021: HAAA/Addis Ababa FIR airspace below FL290 was closed over Tigray after a military aircraft was reportedly shot down near Mekelle. Nov 2020: Conflict escalated in Tigray. Airways were closed, airports hit by rockets and missiles fired into Eritrea. Sep 2018: Ethiopian ATC controllers went on strike. Retired and foreign controllers were brought in to cover ops."
+        }
+      ],
       "bulletin": "IN-ETHIOPIA",
       "issued": "30/04/2026",
       "revised": "",
@@ -884,7 +984,12 @@
       ],
       "tier": "in",
       "restrictionLabel": "Caution only — factor into your own risk assessment and routing, below FL 260",
-      "cross": [],
+      "cross": [
+        {
+          "src": "safeairspace.net (Risk Level 3 – Caution)",
+          "detail": "Oct 2026: Fighting continues across Myanmar, with recent military airstrikes in Rakhine and a drone attack in September that briefly shut down VYMD/Mandalay. See OPSGROUP Briefing : What is going on in Myanmar - 2022 The primary risk is fighting and air-defence activity. EASA, Canada and France advise flying at or above FL260. Italy and the UK flag risks below 25,000 ft AGL, while Germany’s warning applies below FL160. France also says to use only VYYY/Yangon as an alternate. GPS interference has been reported in the north. Major events: Sep 2026: A resistance group claimed a drone attack on a military air base at VYMD/Mandalay. Flights were briefly suspended. Feb 2026: A drone damaged a passenger ATR preparing to depart VYMK/Myitkyina. The airport closed temporarily. Jan 2024: An armed group reportedly shot down a military helicopter in Kachin state, likely with a shoulder-fired missile. Sep 2023: Resistance groups attacked military sites, including hangars near VYNT/Naypyitaw. GPS jamming was also reported on airway N895. Apr 2023: An artillery attack temporarily closed VYYY/Yangon. Sep 2022: A passenger was reportedly hit by gunfire as an ATR approached VYLK/Loikaw."
+        }
+      ],
       "bulletin": "IN-MYANMAR",
       "issued": "30/07/2026",
       "revised": "",
