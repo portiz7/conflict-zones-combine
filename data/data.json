@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-30T12:38:34.761617+00:00",
+  "generated_at": "2026-10-30T22:11:00.746698+00:00",
   "sources": {
     "easa": {
       "repo": "portiz7/czib-fetch-easa",
-      "fetched_at": "2026-10-30T12:38:34.761617+00:00"
+      "fetched_at": "2026-10-30T22:11:00.746698+00:00"
     },
     "safeairspace": {
       "repo": "portiz7/czib-fetch-opsgroup",
-      "fetched_at": "2026-10-30T12:11:31.443387+00:00"
+      "fetched_at": "2026-10-30T21:57:15.173835+00:00"
     }
   },
   "firs": {
@@ -947,9 +947,9 @@
         }
       ],
       "bulletin": "IN-ETHIOPIA",
-      "issued": "30/04/2026",
+      "issued": "30/10/2026",
       "revised": "",
-      "validUntil": "31/10/2026"
+      "validUntil": "30/04/2027"
     },
     "VYYF": {
       "name": "FIR Yangon, below FL260",
